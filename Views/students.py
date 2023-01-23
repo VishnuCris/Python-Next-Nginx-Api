@@ -24,13 +24,15 @@ def get_students_view():
 	return studentArr,True
 
 def update_student_view(data):
-	student = Student.query.get(data.id)
+	student = Student.query.get(data.get('id'))
 	if not student:
 		return 'No Student available under given id',False
-	if not name:
-		return 'Enter a valid name',False
 
-	student.firstname = name
+	student.firstname = data.get('firstname')
+	student.lastname = data.get('lastname')
+	student.email = data.get('email')
+	student.age = data.get('age')
+	student.bio = data.get('bio')
 	db.session.add(student)
 	db.session.commit()
 	return 'Updated successfully',True
