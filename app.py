@@ -23,6 +23,8 @@ app.config['JWT_ACCESS_COOKIE_PATH'] = '/'
 app.config['JWT_COOKIE_SAMESITE'] = "None" 
 app.config['JWT_COOKIE_SECURE']=True
 app.config['JWT_COOKIE_CSRF_PROTECT'] = True
+app.config['JWT_COOKIE_DOMAIN'] = '127.0.0.1'
+app.config['JWT_CSRF_IN_COOKIES'] = True
 app.config['JWT_SECRET_KEY'] = '004f2af45d3a4e161a7dd2d17fdae4725f' 
 
 jwt = JWTManager(app)
@@ -34,4 +36,5 @@ app.register_blueprint(routes,url_prefix='/api')
 def after_request(response):
     print('Request-Response Cycle Completed')
     response.headers['Access-Control-Allow-Credentials'] = 'true'
+    response.headers['Access-Control-Allow-Orgin'] = '*'
     return response

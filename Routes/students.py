@@ -18,7 +18,7 @@ def avoidDuplicateEntry(func):
 	return decorator
 
 @routes.post('/create/student')
-# @avoidDuplicateEntry
+@jwt_required()
 def create_student():
 	try:
 		response = create_student_view(request.get_json())
@@ -27,7 +27,7 @@ def create_student():
 		return jsonify({'msg':str(e),'status':False})
 
 @routes.post('/list/student')
-# @jwt_required()
+@jwt_required()
 def get_students():
 	try:
 		response,status = get_students_view()
@@ -36,6 +36,7 @@ def get_students():
 		return jsonify({'msg':str(e),'status':False})
 
 @routes.post('/update/student')
+@jwt_required()
 def update_student():
 	try:
 		response,status = update_student_view(request.get_json())
@@ -44,6 +45,7 @@ def update_student():
 		return jsonify({'msg':str(e),'status':False})
 
 @routes.post('/delete/student')
+@jwt_required()
 def delete_student():
 	try:
 		response,status = delete_student_view(request.get_json())

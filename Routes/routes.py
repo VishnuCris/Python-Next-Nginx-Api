@@ -60,9 +60,9 @@ def user_signup():
 
 @routes.post('/logout')
 def user_logout():
-	res = {'msg':'logged out successfully','status':True	}
+	res = make_response({'msg':'logged out successfully','status':True	})
 	unset_jwt_cookies(res)
-	return jsonify(res)
+	return res
 
 
 

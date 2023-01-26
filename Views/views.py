@@ -4,7 +4,11 @@ from werkzeug.security import generate_password_hash,check_password_hash
 from db import db
 from app import app
 from flask import make_response
-from flask_jwt_extended import create_access_token,create_refresh_token,set_refresh_cookies,set_access_cookies
+from flask_jwt_extended import (
+	create_access_token,create_refresh_token,
+	set_refresh_cookies,set_access_cookies,
+	get_csrf_token
+)
 
 def isUserAvailable(data):
 	# userSQl = User.query.filter(User.email == data.get('email'),User.password == hashPassword(data.get('password')))
@@ -34,9 +38,11 @@ def user_login(data):
 	   	user = data
 	   	if user:
 	   		access_token = create_access_token(identity=user.id)
+	   		# csrf = get_csrf_token(access_token)
+	   		# response = make_response({'msg':'Logined Succesfully','access_token':access_token,'csrf':csrf,'status':True})
 	   		response = make_response({'msg':'Logined Succesfully','access_token':access_token,'status':True})
 	   		set_access_cookies(response, access_token)
-	   		return response,200
+	   		return response
 	   	else:
 	   		response = make_response({'msg':'Not Registered with us !!!','status':False})
 	   		return response
