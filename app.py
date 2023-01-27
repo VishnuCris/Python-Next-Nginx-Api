@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import secrets
 from sqlalchemy.sql import func
-import datetime
+from datetime import timedelta
 from flask_jwt_extended import (
     JWTManager, jwt_required, create_access_token,
  	create_refresh_token,
@@ -25,6 +25,7 @@ app.config['JWT_COOKIE_SECURE']=True
 app.config['JWT_COOKIE_CSRF_PROTECT'] = True
 app.config['JWT_COOKIE_DOMAIN'] = '127.0.0.1'
 app.config['JWT_CSRF_IN_COOKIES'] = True
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
 app.config['JWT_SECRET_KEY'] = '004f2af45d3a4e161a7dd2d17fdae4725f' 
 
 jwt = JWTManager(app)
