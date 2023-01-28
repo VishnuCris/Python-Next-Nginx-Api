@@ -14,3 +14,13 @@ Topics covered by this project.
 		7.To activate a new venv using pipenv use pipenv shell or activate existing shell use pipenv run 'command'.
 		8.__init__.py to make your flask project as a py package.
 		9.sentry for error logging and error notifications in production.
+		10.subprocess:
+			give command in []
+			eg:['cat','file.extension']
+			run -> simply runs the command and returns the argument and result_code (success=0 , fail=1)
+			call -> simply runs the command and returns result_code (success=0 , fail=1)
+			Popen -> execute and returns the result printed in terminal.
+			if we call Popen.communicate() it returns two datas:
+				strout -> output in bytes 
+				strerr -> error in bytes
+				convert it to str by usinf stdout.decode() and for error stderr.decode()
