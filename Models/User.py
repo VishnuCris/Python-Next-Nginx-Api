@@ -1,5 +1,5 @@
 from flask import current_app as app
-from db import db
+from Python_Next_Nginx_Api.db import db
 from sqlalchemy.sql import func
 
 class User(db.Model):

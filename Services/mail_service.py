@@ -1,4 +1,4 @@
-from app import app
+from Python_Next_Nginx_Api import app
 from flask_mail import Message,Mail
 
 class MailService:

@@ -1,6 +1,6 @@
-from Models.Student import Student
+from Python_Next_Nginx_Api.Models.Student import Student
 from flask import jsonify
-from db import db
+from Python_Next_Nginx_Api.db import db
 
 def create_student_view(data):
 	student = Student(firstname=data.get('FirstName'),lastname=data.get('LastName'),email=data.get('Email'),age=data.get('Age'),bio=data.get('Bio'))

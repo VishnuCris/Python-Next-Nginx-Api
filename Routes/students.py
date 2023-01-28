@@ -1,5 +1,5 @@
 from .routes import routes
-from Views.students import (
+from Python_Next_Nginx_Api.Views.students import (
 	get_students_view,create_student_view,update_student_view,
 	checkStudentExist,delete_student_view
 )

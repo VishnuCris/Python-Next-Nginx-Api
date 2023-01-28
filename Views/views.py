@@ -1,8 +1,8 @@
-from Models.User import User
-from Services.services import hashPassword
+from Python_Next_Nginx_Api.Models.User import User
+from Python_Next_Nginx_Api.Services.services import hashPassword
 from werkzeug.security import generate_password_hash,check_password_hash
-from db import db
-from app import app
+from Python_Next_Nginx_Api.db import db
+from Python_Next_Nginx_Api import app
 from flask import make_response
 from flask_jwt_extended import (
 	create_access_token,create_refresh_token,

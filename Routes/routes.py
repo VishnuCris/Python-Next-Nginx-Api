@@ -1,10 +1,10 @@
 from flask import (
 	Blueprint,current_app as app,jsonify,request,g,session,make_response
 )
-from db import db
-from Models.User import User
+from Python_Next_Nginx_Api.db import db
+from Python_Next_Nginx_Api.Models.User import User
 from functools import wraps
-import Views.views as views
+import Python_Next_Nginx_Api.Views.views as views
 from flask_jwt_extended import (
 	set_access_cookies,set_refresh_cookies,
 	jwt_required,unset_jwt_cookies
