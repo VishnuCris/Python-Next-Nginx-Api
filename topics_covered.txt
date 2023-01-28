@@ -1,0 +1,14 @@
+Topics covered by this project.
+	FLASK:
+		1.Basic CRUD operation with mysql as database using sqlAlchamey.
+		2.User Authentication with JWT token using Flak_JWT_extended.
+		3.pipenv and pipreq is two different alternative for pip.
+		4.We can generate a requirement.txt file using :
+			1.With virtual env:
+				1.pip  freeze > requirement.txt
+				2.pipenv -r lock >> requirement.txt
+			2.Without virtual env:				
+				1.pipreqs /path/to/project
+		5.Using pipenv,it can automatically update pipfile like requirement.txt when adding a new package using pipenv.
+		6.If using pip we can write a script that can automatically update the requirement.txt by implement them in cron.
+		7.To activate a new venv using pipenv use pipenv shell or activate existing shell use pipenv run 'command'

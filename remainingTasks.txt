@@ -1,6 +1,4 @@
-REMAINIGS:
-	1.Cookie Authentication.
-	2.Proper User Exp in Students Crud.
-	3.Script for git push.
-	4.Cleaning disk space in python.
-	4.Cleaning disk space for every 1 hr (test) and change it to every 3 days put in cron
+1.Detect changes in virtual env and run a script automatially to update reqiurement.txt(low priority)
+2.Cover Error handling,debugging,logging.
+3.UI Changes practice.
+4.Send emails.
