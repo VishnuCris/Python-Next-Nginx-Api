@@ -12,6 +12,8 @@ from flask_jwt_extended import (
     get_jwt_identity, set_access_cookies,
     set_refresh_cookies, unset_jwt_cookies
 )
+import werkzeug
+
 
 app = Flask(__name__)
 # app.config['SECRET_KEY'] = secrets.token_hex(16)
@@ -45,6 +47,14 @@ app.register_blueprint(routes,url_prefix='/api')
 @app.after_request
 def after_request(response):
     print('Request-Response Cycle Completed')
+    # print(response.status_code)
+    # print(response.get_json())
     response.headers['Access-Control-Allow-Credentials'] = 'true'
     response.headers['Access-Control-Allow-Orgin'] = '*'
     return response
+@app.errorhandler(werkzeug.exceptions.BadRequest)
+def handle_bad_request(e):
+    print(e)
+    return {'msg':str(e)}
+
+app.register_error_handler(401, handle_bad_request)

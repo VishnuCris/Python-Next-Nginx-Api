@@ -11,4 +11,6 @@ Topics covered by this project.
 				1.pipreqs /path/to/project
 		5.Using pipenv,it can automatically update pipfile like requirement.txt when adding a new package using pipenv.
 		6.If using pip we can write a script that can automatically update the requirement.txt by implement them in cron.
-		7.To activate a new venv using pipenv use pipenv shell or activate existing shell use pipenv run 'command'
+		7.To activate a new venv using pipenv use pipenv shell or activate existing shell use pipenv run 'command'.
+		8.__init__.py to make your flask project as a py package.
+		9.sentry for error logging and error notifications in production.
