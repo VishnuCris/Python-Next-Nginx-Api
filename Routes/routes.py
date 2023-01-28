@@ -11,6 +11,7 @@ from flask_jwt_extended import (
 )
 routes = Blueprint('routes',__name__)
 from .students import *
+from .activities import *
 
 def token_required(f):
    @wraps(f)

@@ -29,7 +29,16 @@ app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
 app.config['JWT_SECRET_KEY'] = '004f2af45d3a4e161a7dd2d17fdae4725f' 
 
 jwt = JWTManager(app)
+
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'effectivecoder717@gmail.com'
+app.config['MAIL_PASSWORD'] = 'rmzuaxlpfktcezoy'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
 CORS(app,support_credentials=True)
+
 from Routes.routes import routes
 app.register_blueprint(routes,url_prefix='/api')
 
