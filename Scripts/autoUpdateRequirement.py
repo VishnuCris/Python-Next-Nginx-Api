@@ -3,5 +3,5 @@ import os
 import subprocess
 
 # subprocess.call(['df','-h'])
-def push_remote(msg):
-	subprocess.run(["ls", "-l"])
+def updateRquirement_txt(file_name):
+	subprocess.run(["git", 'diff','../__init__.py'])
