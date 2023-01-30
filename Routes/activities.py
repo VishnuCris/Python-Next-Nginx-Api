@@ -19,3 +19,4 @@ def Create_Content():
 def exceptionHandling():
 	# raise Exception('Testing')
 	return jsonify({'status':True,'msg':'Success'})
+	
