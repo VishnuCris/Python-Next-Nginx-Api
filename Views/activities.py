@@ -10,4 +10,10 @@ def send_mail_view():
 	mailCredentials['message'] = 'Starting Poin For Massive Success'
 	mailService = MailService()
 	response = mailService.Send_Mail(mailCredentials)
-	return {'status':True,'message':response.get('msg')}
+	return {'status':True,'msg':response.get('msg')}
+
+def Create_Content_View(data):
+	try:
+		return {'content':'Is under Devolopement','status':True}
+	except Exception as Err:
+		return {'msg':str(Err),'status':False}

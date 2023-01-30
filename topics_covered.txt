@@ -24,3 +24,11 @@ Topics covered by this project.
 				strout -> output in bytes 
 				strerr -> error in bytes
 				convert it to str by usinf stdout.decode() and for error stderr.decode()
+		11.Error handler:
+			1.Raise an exception with base class Exception and catch it in the dunter file using flask errorhandler function.
+			2.Pass the Exception as the parameter for the flask errorhandler function (pass error class in my case it is the inbuild Exception Class of python.ypu can also create custome classes which shoukd be a child of Exception class).We need not neccessary want to raise exceptions with base class Exception.Normally pythons error are under Exception class.
+		12.Base Classes:
+			1.If we pass object as a parent class for custom class,the return type of class is object.
+			2.By usimg flask app.from_object() we can pass our object type class and the class variables will set as key and it's value will be set as value for app.config parameter.
+		13.flask's from_pyfile is used to load config variables from a python file which consits of a value assinged to a variable.In documentation they used .cfg file but not working here.Explore about it today,if we have time.Create a py file outsied of the base folder and combine it with the base directory.
+		14.Configure logging seperately using python's inbuild logging library.Log error using log.error(err) and log the normal messages using log.debug(msg).

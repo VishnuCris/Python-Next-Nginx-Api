@@ -13,11 +13,15 @@ from flask_jwt_extended import (
     set_refresh_cookies, unset_jwt_cookies
 )
 import werkzeug
-
+from Python_Next_Nginx_Api.logging import configure_logging
+from Python_Next_Nginx_Api.config import Config
 
 app = Flask(__name__)
 # app.config['SECRET_KEY'] = secrets.token_hex(16)
 app.config['SECRET_KEY'] = '004f2af45d3a4e161a7dd2d17fdae47f'
+
+app.config.from_object(Config)
+
 app.config['SQLALCHEMY_DATABASE_URI'] ='mysql://vishnu:Password123#$!@localhost/AI_Coder'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_TOKEN_LOCATION'] = ['cookies']
@@ -41,20 +45,24 @@ app.config['MAIL_USE_SSL'] = True
 
 CORS(app,support_credentials=True)
 
+errorlog = configure_logging(f"{app.config['BASE_PATH']}/logs/error.log")
+log = configure_logging(f"{app.config['BASE_PATH']}/logs/all.log")
+
 from .Routes.routes import routes
 app.register_blueprint(routes,url_prefix='/api')
 
 @app.after_request
 def after_request(response):
     print('Request-Response Cycle Completed')
-    # print(response.status_code)
-    # print(response.get_json())
+    if response.status_code == 206:
+        log.debug(response.get_json())
     response.headers['Access-Control-Allow-Credentials'] = 'true'
     response.headers['Access-Control-Allow-Orgin'] = '*'
     return response
-@app.errorhandler(werkzeug.exceptions.BadRequest)
+
+@app.errorhandler(Exception)
 def handle_bad_request(e):
     print(e)
-    return {'msg':str(e)}
+    errorlog.error(e)
+    return jsonify({'msg':str(e),'status':False,'type':'Application Error'})
 
-app.register_error_handler(401, handle_bad_request)

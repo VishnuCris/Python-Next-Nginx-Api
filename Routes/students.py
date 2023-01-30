@@ -20,35 +20,23 @@ def avoidDuplicateEntry(func):
 @routes.post('/create/student')
 @jwt_required()
 def create_student():
-	try:
-		response = create_student_view(request.get_json())
-		return jsonify({'msg':response,'status':True})
-	except Exception as e:
-		return jsonify({'msg':str(e),'status':False})
+	response = create_student_view(request.get_json())
+	return jsonify({'msg':response,'status':True})
 
 @routes.post('/list/student')
 @jwt_required()
 def get_students():
-	try:
-		response,status = get_students_view()
-		return jsonify({'data':response,'status':status})
-	except Exception as e:
-		return jsonify({'msg':str(e),'status':False})
+	response,status = get_students_view()
+	return jsonify({'data':response,'status':status})
 
 @routes.post('/update/student')
 @jwt_required()
 def update_student():
-	try:
-		response,status = update_student_view(request.get_json())
-		return jsonify({'msg':response,'status':status})
-	except Exception as e:
-		return jsonify({'msg':str(e),'status':False})
+	response,status = update_student_view(request.get_json())
+	return jsonify({'msg':response,'status':status})
 
 @routes.post('/delete/student')
 @jwt_required()
 def delete_student():
-	try:
-		response,status = delete_student_view(request.get_json())
-		return jsonify({'msg':response,'status':status})
-	except Exception as e:
-		return jsonify({'msg':str(e),'status':False})
+	response,status = delete_student_view(request.get_json())
+	return jsonify({'msg':response,'status':status})

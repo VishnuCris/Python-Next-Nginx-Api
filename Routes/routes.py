@@ -34,30 +34,22 @@ def token_required(f):
 @routes.post('/login')
 # @user_exist
 def user_login():
-	try:
-		resp = views.isUserAvailable(request.get_json())
-		auth = request.authorization  
-		if resp:
-			response= views.user_login(resp)
-			return response
-		return jsonify({'msg':'Not Registered with us !!!','status':False})	
-	except Exception as e:
-		print(e)
-		return jsonify({'msg':str(e),'status':False})
+	resp = views.isUserAvailable(request.get_json())
+	auth = request.authorization  
+	if resp:
+		response= views.user_login(resp)
+		return response
+	return jsonify({'msg':'Not Registered with us !!!','status':False})	
 
 
 @routes.post('/signup')
 # @user_exist
 def user_signup():
-	try:
-		resp = views.isUserAvailable(request.get_json())
-		if resp:
-			return jsonify({'msg':'Already Registered','status':False})
-		response = views.user_signup(request.get_json())
-		return response
-	except Exception as e:
-		print(e)
-		return jsonify({'msg':str(e),'status':False})
+	resp = views.isUserAvailable(request.get_json())
+	if resp:
+		return jsonify({'msg':'Already Registered','status':False})
+	response = views.user_signup(request.get_json())
+	return response
 
 @routes.post('/logout')
 def user_logout():
