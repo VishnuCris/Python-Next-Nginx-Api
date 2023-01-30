@@ -1,0 +1,5 @@
+2023-01-30 21:46:51,205  * Debugger is active!
+2023-01-30 21:46:51,205  * Debugger PIN: 943-467-527
+2023-01-30 21:46:59,518 127.0.0.1 - - [30/Jan/2023 21:46:59] "OPTIONS /api/list/student HTTP/1.1" 200 -
+2023-01-30 21:46:59,524 127.0.0.1 - - [30/Jan/2023 21:46:59] "[31m[1mPOST /api/list/student HTTP/1.1[0m" 401 -
+2023-01-30 21:47:09,426  * Detected change in '/home/vishnu/Documents/BackEnd/python/flask/Python_Next_Nginx_Api/logging.py', reloading

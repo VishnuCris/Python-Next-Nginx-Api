@@ -1,0 +1,16 @@
+2023-01-30 22:21:59,839 INFO ########### ALL LOGS ##########
+2023-01-30 22:21:59,840 INFO {'msg': 'Testing', 'status': False, 'type': 'Application Error'}
+2023-01-30 22:21:59,879 INFO ########### ALL LOGS ##########
+2023-01-30 22:21:59,879 INFO {'msg': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.', 'status': False, 'type': 'Application Error'}
+2023-01-30 22:27:31,555 INFO ########### ALL LOGS ##########
+2023-01-30 22:27:31,555 INFO {'msg': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.', 'status': False, 'type': 'Application Error'}
+2023-01-30 22:27:31,702 INFO ########### ALL LOGS ##########
+2023-01-30 22:27:31,702 INFO {'msg': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.', 'status': False, 'type': 'Application Error'}
+2023-01-30 22:27:38,792 INFO ########### ALL LOGS ##########
+2023-01-30 22:27:38,792 INFO {'msg': 'Testing', 'status': False, 'type': 'Application Error'}
+2023-01-30 22:27:38,834 INFO ########### ALL LOGS ##########
+2023-01-30 22:27:38,834 INFO {'msg': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.', 'status': False, 'type': 'Application Error'}
+2023-01-30 22:27:45,976 INFO ########### ALL LOGS ##########
+2023-01-30 22:27:45,977 INFO {'msg': 'Success', 'status': True}
+2023-01-30 22:27:46,013 INFO ########### ALL LOGS ##########
+2023-01-30 22:27:46,013 INFO {'msg': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.', 'status': False, 'type': 'Application Error'}

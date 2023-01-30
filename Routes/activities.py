@@ -14,3 +14,8 @@ def send_mail():
 def Create_Content():
 	response = Create_Content_View(request.get_json())
 	return jsonify(response)
+
+@routes.get('/exception_handling')
+def exceptionHandling():
+	# raise Exception('Testing')
+	return jsonify({'status':True,'msg':'Success'})

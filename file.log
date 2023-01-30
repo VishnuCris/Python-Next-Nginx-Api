@@ -1,0 +1,19 @@
+2023-01-30 22:08:12,036:WARNING:werkzeug: * Debugger is active!
+2023-01-30 22:08:12,037:INFO:werkzeug: * Debugger PIN: 808-474-794
+2023-01-30 22:08:27,113:INFO:werkzeug: * Detected change in '/home/vishnu/Documents/BackEnd/python/flask/Python_Next_Nginx_Api/logging.py', reloading
+2023-01-30 22:08:27,822:DEBUG:root:Debug message
+2023-01-30 22:08:27,823:INFO:root:Info message
+2023-01-30 22:08:27,823:WARNING:root:Warning message
+2023-01-30 22:08:27,823:ERROR:root:Error message
+2023-01-30 22:08:27,823:CRITICAL:root:Critical message
+2023-01-30 22:08:27,888:WARNING:werkzeug: * Debugger is active!
+2023-01-30 22:08:27,888:INFO:werkzeug: * Debugger PIN: 808-474-794
+2023-01-30 22:08:31,198:INFO:werkzeug: * Detected change in '/home/vishnu/Documents/BackEnd/python/flask/Python_Next_Nginx_Api/logging.py', reloading
+2023-01-30 22:08:31,857:DEBUG:root:Debug message
+2023-01-30 22:08:31,857:INFO:root:Info message
+2023-01-30 22:08:31,857:WARNING:root:Warning message
+2023-01-30 22:08:31,857:ERROR:root:Error message
+2023-01-30 22:08:31,857:CRITICAL:root:Critical message
+2023-01-30 22:08:31,910:WARNING:werkzeug: * Debugger is active!
+2023-01-30 22:08:31,911:INFO:werkzeug: * Debugger PIN: 808-474-794
+2023-01-30 22:08:37,388:INFO:werkzeug: * Detected change in '/home/vishnu/Documents/BackEnd/python/flask/Python_Next_Nginx_Api/logging.py', reloading
