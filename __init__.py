@@ -15,13 +15,19 @@ from flask_jwt_extended import (
 import werkzeug
 from Python_Next_Nginx_Api.logging import setup_logger
 from Python_Next_Nginx_Api.config import Config
+import logging,logging.config,yaml
 
 app = Flask(__name__)
 # app.config['SECRET_KEY'] = secrets.token_hex(16)
 app.config['SECRET_KEY'] = '004f2af45d3a4e161a7dd2d17fdae47f'
 
+logging.config.dictConfig(yaml.safe_load(open('logging.conf')))
+
 app.config.from_object(Config)
-# app.config.from_pyfile(app.config['BASE_PATH']+'/../config_values.py')
+app.config.from_pyfile(app.config['BASE_PATH']+'/../config_values.py')
+
+from Python_Next_Nginx_Api.Routes.api_route import addResources
+addResources(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] ='mysql://vishnu:Password123#$!@localhost/AI_Coder'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -45,6 +51,7 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 CORS(app,support_credentials=True)
+# cors = CORS(app, resources={r"/api/*": {"origins": "*"}},support_credentials=True)
 
 errorlog = setup_logger('error',f"{app.config['BASE_PATH']}/logs/error.log")
 
