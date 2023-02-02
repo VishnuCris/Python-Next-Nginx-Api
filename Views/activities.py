@@ -1,6 +1,8 @@
 from Python_Next_Nginx_Api import app
 from flask_mail import Message,Mail
 from Python_Next_Nginx_Api.Services.mail_service import MailService
+import time,math
+
 
 def send_mail_view():
 	mailCredentials = {}
