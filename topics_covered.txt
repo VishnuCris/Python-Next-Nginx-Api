@@ -32,3 +32,47 @@ Topics covered by this project.
 			2.By usimg flask app.from_object() we can pass our object type class and the class variables will set as key and it's value will be set as value for app.config parameter.
 		13.flask's from_pyfile is used to load config variables from a python file which consits of a value assinged to a variable.In documentation they used .cfg file but not working here.Explore about it today,if we have time.Create a py file outsied of the base folder and combine it with the base directory.
 		14.Configure logging seperately using python's inbuild logging library.Log error using log.error(err) and log the normal messages using log.debug(msg).
+		14.caching.
+		15.decorators.
+		16.List slicing,stread,comperhension.
+		17.lambda.
+		18.map:
+		19.map functions are faster than native looping system.
+		20.reduce,operator,accumulate,filter.(functools)
+		21.itertools:
+			1.infinite iterables:
+			2.count(num,step)
+			3.cycle('sequence')
+			4.repeat(sequence,times to print):
+				print(list(itertools.repeat(20,10)))
+				convert the result in to list or any iterable to see the result correctly.
+			#For Complex Combinations
+			5.product([values,values],times):
+				print(list(itertools.product(range(3),2)))
+			6.permutation([values,values],times)(prints all possible combinations):
+			print(list(itertools.permutations(range(3),2)))
+			7.combinations:(prints all combinations without replacemant)
+			print(list(itertools.combinations(range(3),2)))
+			8.combinations_with_replacement:(prints all combinations without replacemant)
+			print(list(itertools.combinations_with_replacement(range(3),2)))
+
+		22.flush of filehandler in python:
+			use to clear filereaderobject after reading the file.
+			eg:
+			fileObject = open("gfg.txt", "r")
+			# reading the contents before flush()
+			fileContent = fileObject.read()
+			# displaying the contents
+			print("\nBefore flush():\n", fileContent)
+			# clearing the input buffer
+			fileObject.flush()
+			# reading the contents after flush()
+			# reads nothing as the internal buffer is cleared
+			fileContent = fileObject.read()
+		23.Exception handling:
+			try
+			except
+			else(if only the try does not raise exception)
+			finally
+			raise
+

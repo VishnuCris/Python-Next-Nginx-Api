@@ -1,10 +1,1 @@
-1.Detect changes in virtual env and run a script automatially to update reqiurement.txt(low priority)
-2.UI Changes practice.
-3.Send emails.
-4.request module.
-
-1.Cover Error handling,debugging,logging.:
-	basic error handlers
-	logging module in python/flask
-
-	after that debuging and error handling tools
+study all topics in : https://python-course.eu/advanced-python/2.
